@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Тренажер "Примерчики"</title>
+</head>
+
+<body>
+    <div class="container-start" id="sheetOfPresent">
+        <h1 class="container_start-title visually-hidden">Тренажер для мозга Примерчики</h1>
+        <h2 class="container_start-title">Добро пожаловать в тренажер для мозга "Примерчики"</h2>
+        <p class="container_start-about">
+            Это упражнение поможет привести Ваш самый главный орган в отличную форму!<br>
+            Как это работает: ежедневно Вы решаете 30 математических примеров в уме. 
+            Сложность примеров можно настроить в меню.
+            Встроенный таймер засекает время.<br>
+            Следить за своим прогрессом можно во вкладке Прошлые достижения.<br>
+            Удачи!
+        </p>
+        <ul class="container_start-menu">
+            <li class="container_start-menu-item">
+                <button class="containыer_start-btn btn" id="btnStart">Начать</button>
+            </li>
+            <li class="container_start-menu-item">
+                <button class="container_start-Btn btn" data-tab='chooseLevelSheet'>Выбрать сложность</button>
+            </li>
+            <li class="container_start-menu-item">
+                <button class="container_start-Btn btn" data-tab='oldAchives'>Прошлые результаты</button>
+            </li> 
+        </ul>
+                
+        <footer class="footer">
+            <p class="footer_text">Тренажер для мозга "Примерчики"</p>
+            <p class="footer_text">Разработка сайта:
+                <a href="#" class="footer_author-link">Татьяныш-Девелопер</a>
+                2020
+            </p>
+        </footer>
+    </div>
+
+    <div class="container__level" id="chooseLevelSheet">
+        <div class="level__header">
+            <div class="close" id="closeLevel">
+                <span class="visually-hidden">Закрыть</span>
+            </div>
+        </div>
+
+        <ul class="container__level-menu-list">
+            <li class="container__settings-item">
+                <p class="container__settings-description">
+                    Генерируются случайные числа от 0 до 20.
+                    Используется сложение и вычитание
+                </p>
+                <button class="setLevelBtn btn">Легко</button>
+            </li>
+            <li class="container__settings-item">
+                <p class="container__settings-description">
+                    Число от 0 до 20. 
+                    Сложение, вычитание, умножение, деление.
+                </p>
+                <button class="setLevelBtn btn">Средне</button>
+            </li>
+            <li class="container__settings-item">
+                <p class="container__settings-description">
+                    Число от 0 до 50. 
+                    Сложение, вычитание, умножение, деление.
+                </p>
+                <button class="setLevelBtn btn">Сложно</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container__achives" id="oldAchives">
+        <div class="achives__header">
+            <div class="close" id="closeAchives">
+                <span class="visually-hidden">Закрыть</span>
+            </div>
+        </div>
+        <p id="wrapperForOldAchives">
+            Тут будут Ваши достижения
+        </p>
+    </div>
+
+    <div class="container hidden" id="sheetOfGame">
+        <div class="header">
+            <ul class="header__menu">
+                <li class="header__menu-item"><span id="timer"></span> сек</li>
+                <li class="header__menu-item">
+                    <span id="howManuQuest"></span>/30</li>
+                <li class="header__menu-item close" id="close">
+                    <span class="visually-hidden">Закрыть</span>
+                </li>
+            </ul>
+        </div>
+        <p>
+            <span class="container__quest" id="quest"></span>
+            <input class="container__input" type="number" id="input">
+        </p>
+        <button class="btn" id="btnCheckAndNext">Следующий</button>
+    </div>
+
+    <div class="container-finished hidden" id="sheetOfResults">
+        <p class="container__finished-text">
+            Сегодня Вы решили 30 примеров за
+            <span id="resultTime"></span>
+            секунд. Из них правильно
+            <span id="resultRightAnswer"></span>
+            примеров.
+            <p class="hidden" id="WrongAnswers">
+                Что-то пошло не так тут:
+            </p>
+        </p>
+        <button class="container__finished-btn btn" id="backToMenu">Меню</button>
+    </div>
+
+
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
